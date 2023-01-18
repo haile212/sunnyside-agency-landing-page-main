@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
+
+*{
+    padding: 0px;
+    margin:0px;
+    box-sizing: border-box;   
+}
+
+a{
+    text-decoration: none;
+}
+body{
+    display: grid;
+    grid-template-columns: 340px;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.125rem;
+    font-family:'Barlow',sans-serif;
+    font-weight: 600;
+    color:hsl(232, 10%, 55%);
+    padding: 0px 20px;
+}
+header{
+    position: relative;
+    background-image: url(../images/mobile/image-header.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 60vh;
+}
+header img{
+    width: 40px;
+}
+.logo{
+    width: 150px;
+}
+.arrow {
+    margin-top: 60px;
+    margin-left: 50%;
+}
+
+nav{
+    position: relative;
+    display: flex;
+    min-height: 10vh;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+.toogle{
+    display: none;
+}
+#check{
+    display: none;
+}
+#check:checked ~ .toogle{
+    display: flex;
+    position: absolute;
+    top: 90px;
+
+
+}
+
+.toogle ul li a{
+    color:hsl(232, 10%, 55%);
+}
+#check:checked ~ .toogle ul{
+    border: 1px solid red;
+    background-color:white;
+    padding: 15px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#header-contact{
+    padding: 10px 15px;
+    border-radius: 20px;
+    background-color: hsl(51, 100%, 49%);
+    font-family: 'Fraunces',sans-serif;
+    font-weight: 700;
+    color:hsl(232, 10%, 55%);
+
+}
+
+.toogle ul{
+    list-style: none;
+    text-decoration: none;
+}
+main{
+    display: grid;
+    grid-template-columns: 340px;
+    grid-template-rows: repeat(4,300px) repeat(2,600px);
+}
+article{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+.main-pics img{
+    width:340px;
+}
+article h2{
+    font-family: 'Fraunces',sans-serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color:hsl(212, 27%, 19%);
+}
+article p{  
+    text-align: center;
+}
+article a{
+    font-size: 1.5rem;
+    font-family: 'Fraunces',sans-serif;
+    font-weight: 700;
+    text-transform: capitalize;
+    color:hsl(212, 27%, 19%);
+    text-decoration: 3px underline hsl(51, 100%, 49%);
+    
+}
+.graphic{
+    background-image: url(../images/mobile/image-graphic-design.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color:  hsl(167, 40%, 24%);
+    position: relative;   
+}
+.graphic article{
+    position: absolute;
+    bottom: 100px;
+}
+.photography{
+    background-image: url(../images/mobile/image-photography.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color:  hsl(167, 40%, 24%);
+    position: relative;   
+}
+.photography article{
+    position: absolute;
+    bottom: 100px;
+}
+.client{
+    color: hsl(212, 27%, 19%);
+    text-align: center;
+}
+.client h2{
+    text-transform:uppercase;
+    color: hsl(210, 4%, 67%);
+    padding: 30px 0px;
+}
+.client-porfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+}
+.client-porfo .bold{
+    font-size: 1.5rem;
+    font-family: 'Fraunces',sans-serif;
+    font-weight: 700;
+}
+.client-porfo .light{
+    color: hsl(210, 4%, 67%);
+    padding-bottom: 20px;
+}
+.client-porfo img{
+    width:100px;
+    border-radius: 50%;
+    padding: 30px 0px;
+}
+.gallery img{
+    width: 100%;
+
+}
+.gallery{
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+}
+.contact{
+    height: 35vh;
+    color: hsl(168, 44%, 32%);
+    background-color:hsl(167, 44%, 70%);
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact h2{
+    font-family: sans-serif;
+    font-weight:900;
+    font-size: 2.5rem;
+}
+.contact .contact-info{
+    font-size: 1.2rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.contact .contact-info a{
+    color: hsl(166, 46%, 31%) ;
+}
+.contact .contact-link{
+    padding: 20px 0px;
+    display: flex;
+    gap: 20px;
+}
+.contact .contact-link img{
+    width: 20px;
+}
+
+
+@media (min-width:640px) {
+    body{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    header{
+        background-image: url(../images/desktop/image-header.jpg);
+        max-height: 40vh;
+
+    }
+    #header-contact{
+        padding: 10px 15px;
+        border-radius: 20px;
+        background-color: white;
+        font-family: 'Fraunces',sans-serif;
+        font-weight: 700;
+        color:hsl(210, 4%, 67%);
+    
+    }
+    .toogle{
+        display: block;
+    }
+    .toogle ul{
+        display: flex;
+        
+        gap: 20px;
+    }
+    .toogle ul li a{
+        color: hsl(0, 0%, 100%);
+    }
+    label img{
+        display: none;
+    }
+    main{
+        grid-template-columns:repeat(2,1fr);
+        grid-template-rows: repeat(2,350px) repeat(1,650px);
+    }
+    .main-pics img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    .transform{
+        grid-row: 1;
+     }
+    .graphic{
+        background-image: url(../images/desktop/image-graphic-design.jpg);
+    }
+    .photography{
+        background-image: url(../images/desktop/image-photography.jpg);
+    }
+    .client-porfo p{
+        width: 50%;
+    }
+    .gallery{
+        grid-template-columns:repeat(4,1fr);
+    }
+    .contact .contact-info{
+        width: 50%;
+    }
+}
